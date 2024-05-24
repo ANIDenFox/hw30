@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Форма вводу</title>
+</head>
+<body>
+<h2>Введіть ваші дані</h2>
+<form action="#" th:action="@{/submit}" th:object="${user}" method="post">
+    <label>Ім'я: <input type="text" th:field="*{name}" /></label><br>
+    <label>Email: <input type="text" th:field="*{email}" /></label><br>
+    <label>Телефон: <input type="text" th:field="*{phone}" /></label><br>
+    <small>Формати номеру телефону: +380XXXXXXXXX, 380XXXXXXXXX та 0XXXXXXXXX, де замість X- цифри вашого номеру телефону.</small><br>
+    <button type="submit">Відправити</button>
+</form>
+</body>
+</html>
